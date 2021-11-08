@@ -1,2 +1,2 @@
-# js_Ass-ncrono
-Repositório de estudo da parte assincrona do javascript 
+# JS Assíncrono
+Repositório de estudo da parte assincrona do javascript
