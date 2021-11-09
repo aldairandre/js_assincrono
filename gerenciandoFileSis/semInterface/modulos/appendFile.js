@@ -3,8 +3,8 @@ const fs = require('fs')
 //appendFile
 
 /**
- * O meto append adiciona um conteudo expecifico a um aqrquivo, 
- * caso o arquivo nao exista o meto cria e ad o conteudo ao arquivo
+ * O meto appendFile adiciona um conteudo expecifico a um aqrquivo, 
+ * caso o arquivo não exista o metodo cria e add o conteudo ao arquivo
  */
 const appendFile = (nomeDoArq,conteudo) => {
     fs.appendFile(nomeDoArq,conteudo, err => {
