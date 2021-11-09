@@ -8,7 +8,9 @@ const fs = require('fs')
 
 const open = fs.open(nomeDoArq,'w',err => {
     if(err) throw err
-    console.log('Aberto');
+    setTimeout(() => {
+        console.log('Criado');
+    },20)
 })
 
 module.exports = open
