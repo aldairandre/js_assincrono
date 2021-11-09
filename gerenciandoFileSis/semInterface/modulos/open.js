@@ -6,7 +6,9 @@ const fs = require('fs')
  * O metodo open cria um arquivo vazio
  */
 
-fs.open('meuNovoArquivo2.txt','w',err => {
+const open = fs.open(nomeDoArq,'w',err => {
     if(err) throw err
     console.log('Aberto');
 })
+
+module.exports = open
