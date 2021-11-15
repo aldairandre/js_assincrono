@@ -8,11 +8,11 @@
 
 input,button {
     border: none;
+    background-color: rgb(216, 213, 213);
 }
 
 body {
     height: 100vh;
-    background-color: burlywood;
 }
 
 img {
@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(89, 113, 184, 0.712);
+    background-image: linear-gradient(to bottom right, rgb(229, 251, 101), rgb(243, 246, 17));
     padding: 10px 8px;
 }
 
@@ -48,7 +48,7 @@ header {
 }
 
 .ulLinks li {
-    background-color: aquamarine;
+    background-color: rgb(51, 236, 51);
     padding: 4px;
 }
 
@@ -57,13 +57,16 @@ header {
     display: block;
 }
 
+.btn-cepStyle {
+    background-color: rgb(51, 236, 51);
+}
+
 /*Mobile Firt Main*/
 
 /**/
 
 @media screen and (max-width: 425px) {
     body {
-        background-color: chartreuse;
         width: 100%;
     }
 
