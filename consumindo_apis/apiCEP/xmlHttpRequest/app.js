@@ -1,7 +1,7 @@
 document.getElementById('btn-cep').addEventListener('click', buscaCep)
 
-function buscaCep(cepClient) {
-    cepClient = document.getElementById('cepCliente').value
+function buscaCep() {
+    let cepClient = document.getElementById('cepCliente').value
 
     const url = `https://viacep.com.br/ws/${cepClient}/json/`
 
@@ -10,17 +10,21 @@ function buscaCep(cepClient) {
     /**
      * Corpo da requisicao 
      */
+    if(!(cepClient == "")){
+        req.open('GET', url, true)
 
-    req.open('GET', url, true)
+        req.onload = () => {
+            let responseAPI = JSON.parse(req.response)
 
-    req.onload = () => {
-        let responseAPI = JSON.parse(req.response)
+            document.getElementById('rua').value = (responseAPI.logradouro);
+            document.getElementById('bairro').value = (responseAPI.bairro);
+            document.getElementById('cidade').value = (responseAPI.localidade);
+            document.getElementById('uf').value = (responseAPI.uf);
+        }
 
-        document.getElementById('rua').value = (responseAPI.logradouro);
-        document.getElementById('bairro').value = (responseAPI.bairro);
-        document.getElementById('cidade').value = (responseAPI.localidade);
-        document.getElementById('uf').value = (responseAPI.uf);
+        req.send()
+    }else {
+        alert("Erro")
     }
-
-    req.send()
+    
 }
