@@ -1,18 +1,26 @@
-const url = 'https://www.viacep.com.br/ws/01001000/json/'
+document.getElementById('btn-cep').addEventListener('click', buscaCep)
 
-const req = new XMLHttpRequest
+function buscaCep(cepClient) {
+    cepClient = document.getElementById('cepCliente').value
 
+    const url = `https://viacep.com.br/ws/${cepClient}/json/`
 
-/**
- * Corpo da requisicao
- */
+    const req = new XMLHttpRequest()
 
-req.open('GET',url,true)
+    /**
+     * Corpo da requisicao 
+     */
 
-req.onload = () => {
-    let responseAPI = JSON.parse(req.response)
+    req.open('GET', url, true)
 
-    console.log(responseAPI);
+    req.onload = () => {
+        let responseAPI = JSON.parse(req.response)
+
+        document.getElementById('rua').value = (responseAPI.logradouro);
+        document.getElementById('bairro').value = (responseAPI.bairro);
+        document.getElementById('cidade').value = (responseAPI.localidade);
+        document.getElementById('uf').value = (responseAPI.uf);
+    }
+
+    req.send()
 }
-
-req.send()
