@@ -1,0 +1,131 @@
+/*Reset basico*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+input,
+button {
+    border: none;
+    background-color: rgb(216, 213, 213);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Header*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(229, 251, 101), rgb(243, 246, 17));
+    padding: 10px 8px;
+}
+
+.aldairAvatar img {
+    width: 90px;
+    height: 90px;
+}
+
+.aldairAvatar figcaption {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+nav {
+    position: absolute;
+    right: 0px;
+}
+
+.ulLinks {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.ulLinks li {
+    background-color: rgb(51, 236, 51);
+    padding: 4px;
+}
+
+.ulLinks li a {
+    text-decoration: none;
+    display: block;
+}
+
+/*FIM*/
+
+/*Main*/
+
+
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.info-cep {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+}
+
+.tp {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2rem
+}
+
+.btn-cepStyle {
+    background-color: rgb(51, 236, 51);
+}
+
+.info-cep input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px #2af817;
+}
+
+
+.info-cep input,
+button {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.content-info-cep {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.content-info-cep div input,
+button {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.content-info-cep div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*FIM*/
