@@ -5,18 +5,23 @@ async function buscaCep() {
 
     const url = `https://viacep.com.br/ws/${cepClient}/json/`
 
-    //Corpo da requisicao
+    //Verificando se o cep esta vazio
 
     if (!(cepClient == "")) {
-
+        
         const validacep = /^[0-9]{8}$/
 
+        //Verificando se o cep contem 8 digitos
+        
         if (validacep.test(cepClient)) {
-
+            
             try {
+
+                //Corpo da requisicao
+
                 const response = await fetch(url)
                 const data = await response.json()
-                console.log(data);
+
                 //Preenchendo inputs
                 document.getElementById('rua').value = (data.logradouro);
                 document.getElementById('bairro').value = (data.bairro);
